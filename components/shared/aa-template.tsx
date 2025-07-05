@@ -1,6 +1,5 @@
 import React from 'react'
-import { cn } from '@/lib/utils' // обновлённый путь
-
+import { cn } from '@/lib/utils'
 interface Props {
   className?: string
 }
