@@ -29,8 +29,17 @@ export const CheckboxFiltersGroup: React.FC<React.PropsWithChildren<Props>> = ({
   defaultValue,
 }) => {
   const [showAll, setShowAll] = React.useState(false)
+  const [searchValue, setSearchValue] = React.useState('')
 
-  const list = showAll ? items : defaultItems.slice(0, limit)
+  const onChangeSearchInput = (value: string) => {
+    setSearchValue(value)
+  }
+
+  const list = showAll
+    ? items.filter((item) =>
+        item.text.toLowerCase().includes(searchValue.toLocaleLowerCase())
+      )
+    : defaultItems.slice(0, limit)
 
   return (
     <div className={cn('', className)}>
@@ -39,6 +48,7 @@ export const CheckboxFiltersGroup: React.FC<React.PropsWithChildren<Props>> = ({
       {showAll && (
         <div className="mb-5">
           <Input
+            onChange={(e) => onChangeSearchInput(e.target.value)}
             placeholder={searchInputPlaceholder}
             className="bg-gray-50 border-none"
           />
