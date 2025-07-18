@@ -32,7 +32,7 @@ export default function Home() {
                       products: [{ price: 550 }],
                     },
                     {
-                      id: 1,
+                      id: 2,
                       name: 'Чизбургер-пицца',
                       imageUrl:
                         'https://media.dodostatic.net/image/r:584x584/019591b642d87304a62d322945990861.avif',
@@ -40,7 +40,7 @@ export default function Home() {
                       products: [{ price: 550 }],
                     },
                     {
-                      id: 1,
+                      id: 3,
                       name: 'Чизбургер-пицца',
                       imageUrl:
                         'https://media.dodostatic.net/image/r:584x584/019591b642d87304a62d322945990861.avif',
@@ -48,7 +48,7 @@ export default function Home() {
                       products: [{ price: 550 }],
                     },
                     {
-                      id: 1,
+                      id: 4,
                       name: 'Чизбургер-пицца',
                       imageUrl:
                         'https://media.dodostatic.net/image/r:584x584/019591b642d87304a62d322945990861.avif',
@@ -56,7 +56,7 @@ export default function Home() {
                       products: [{ price: 550 }],
                     },
                     {
-                      id: 1,
+                      id: 5,
                       name: 'Чизбургер-пицца',
                       imageUrl:
                         'https://media.dodostatic.net/image/r:584x584/019591b642d87304a62d322945990861.avif',
@@ -64,7 +64,7 @@ export default function Home() {
                       products: [{ price: 550 }],
                     },
                     {
-                      id: 1,
+                      id: 6,
                       name: 'Чизбургер-пицца',
                       imageUrl:
                         'https://media.dodostatic.net/image/r:584x584/019591b642d87304a62d322945990861.avif',
@@ -75,10 +75,10 @@ export default function Home() {
                   categoryId={1}
                 />
                 <ProductsGroupList
-                  title="Завтрак"
+                  title="Комбо"
                   products={[
                     {
-                      id: 1,
+                      id: 6,
                       name: 'Чизбургер-пицца',
                       imageUrl:
                         'https://media.dodostatic.net/image/r:584x584/019591b642d87304a62d322945990861.avif',
@@ -86,7 +86,7 @@ export default function Home() {
                       products: [{ price: 550 }],
                     },
                     {
-                      id: 1,
+                      id: 7,
                       name: 'Чизбургер-пицца',
                       imageUrl:
                         'https://media.dodostatic.net/image/r:584x584/019591b642d87304a62d322945990861.avif',
@@ -94,7 +94,7 @@ export default function Home() {
                       products: [{ price: 550 }],
                     },
                     {
-                      id: 1,
+                      id: 8,
                       name: 'Чизбургер-пицца',
                       imageUrl:
                         'https://media.dodostatic.net/image/r:584x584/019591b642d87304a62d322945990861.avif',
@@ -102,7 +102,7 @@ export default function Home() {
                       products: [{ price: 550 }],
                     },
                     {
-                      id: 1,
+                      id: 9,
                       name: 'Чизбургер-пицца',
                       imageUrl:
                         'https://media.dodostatic.net/image/r:584x584/019591b642d87304a62d322945990861.avif',
@@ -110,7 +110,7 @@ export default function Home() {
                       products: [{ price: 550 }],
                     },
                     {
-                      id: 1,
+                      id: 10,
                       name: 'Чизбургер-пицца',
                       imageUrl:
                         'https://media.dodostatic.net/image/r:584x584/019591b642d87304a62d322945990861.avif',
@@ -118,7 +118,7 @@ export default function Home() {
                       products: [{ price: 550 }],
                     },
                     {
-                      id: 1,
+                      id: 11,
                       name: 'Чизбургер-пицца',
                       imageUrl:
                         'https://media.dodostatic.net/image/r:584x584/019591b642d87304a62d322945990861.avif',
@@ -126,7 +126,7 @@ export default function Home() {
                       products: [{ price: 550 }],
                     },
                   ]}
-                  categoryId={1}
+                  categoryId={2}
                 />
               </div>
             </div>
