@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { cn } from '@/lib/utils' // обновлённый путь
 import { FilterCheckbox } from './filter-checkbox'
@@ -5,6 +7,7 @@ import { Title } from './title'
 import { Input } from '../ui/input'
 import { RangeSlider } from './range-slider'
 import { CheckboxFiltersGroup } from './checkbox-filters-group'
+import { useFilterIngredients } from '@/hooks/useFilterIngredients'
 
 interface Props {
   className?: string
@@ -13,6 +16,12 @@ interface Props {
 export const Filters: React.FC<React.PropsWithChildren<Props>> = ({
   className,
 }) => {
+  const { ingredients, loading } = useFilterIngredients()
+
+  const items = ingredients.map((item) => ({
+    value: String(item.id),
+    text: item.name,
+  }))
   return (
     <div className={cn('', className)}>
       <Title text="Фильтрация" size="sm" className="mb-5 font-bold" />
@@ -41,106 +50,9 @@ export const Filters: React.FC<React.PropsWithChildren<Props>> = ({
         title="Ингредиенты"
         className="mt-5"
         limit={6}
-        defaultItems={[
-          {
-            text: 'Сырный соус',
-            value: '1',
-          },
-          {
-            text: 'Моцарелла',
-            value: '2',
-          },
-          {
-            text: 'Чеснок',
-            value: '3',
-          },
-          {
-            text: 'Соленые огурчики',
-            value: '4',
-          },
-          {
-            text: 'Красный лук',
-            value: '5',
-          },
-          {
-            text: 'Томаты',
-            value: '6',
-          },
-        ]}
-        items={[
-          {
-            text: 'Сырный соус',
-            value: '1',
-          },
-          {
-            text: 'Моцарелла',
-            value: '2',
-          },
-          {
-            text: 'Чеснок',
-            value: '3',
-          },
-          {
-            text: 'Соленые огурчики',
-            value: '4',
-          },
-          {
-            text: 'Красный лук',
-            value: '5',
-          },
-          {
-            text: 'Томаты',
-            value: '6',
-          },
-          {
-            text: 'Сырный соус',
-            value: '1',
-          },
-          {
-            text: 'Моцарелла',
-            value: '2',
-          },
-          {
-            text: 'Чеснок',
-            value: '3',
-          },
-          {
-            text: 'Соленые огурчики',
-            value: '4',
-          },
-          {
-            text: 'Красный лук',
-            value: '5',
-          },
-          {
-            text: 'Томаты',
-            value: '6',
-          },
-          {
-            text: 'Сырный соус',
-            value: '1',
-          },
-          {
-            text: 'Моцарелла',
-            value: '2',
-          },
-          {
-            text: 'Чеснок',
-            value: '3',
-          },
-          {
-            text: 'Соленые огурчики',
-            value: '4',
-          },
-          {
-            text: 'Красный лук',
-            value: '5',
-          },
-          {
-            text: 'Томаты',
-            value: '6',
-          },
-        ]}
+        defaultItems={items.slice(0, 6)}
+        items={items}
+        loading={loading}
       />
     </div>
   )
